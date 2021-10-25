@@ -29,10 +29,10 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
     dependencies:
       - package: Segment
-      - package: SegmentAppcues
+      - package: Segment-Appcues
 packages:
   Segment:
     github: segmentio/analytics-swift
     from: 1.0.0
-  SegmentAppcues:
+  Segment-Appcues:
     path: ../..

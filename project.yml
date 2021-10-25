@@ -1,4 +1,4 @@
-name: SegmentAppcues
+name: Segment-Appcues
 attributes:
   ORGANIZATIONNAME: Appcues
 options:
@@ -13,14 +13,14 @@ settings:
   base:
     CLANG_CXX_LANGUAGE_STANDARD: gnu++17
 schemes:
-  SegmentAppcues:
+  Segment-Appcues:
     analyze:
       config: Debug
     archive:
       config: Release
     build:
       targets:
-        SegmentAppcues:
+        Segment-Appcues:
         - analyzing
         - testing
         - running
@@ -34,9 +34,9 @@ schemes:
       config: Debug
       gatherCoverageData: true
       targets:
-      - SegmentAppcuesTests
+      - Segment-AppcuesTests
 targets:
-  SegmentAppcues:
+  Segment-Appcues:
     type: framework
     platform: iOS
     settings:
@@ -45,25 +45,25 @@ targets:
         GENERATE_INFOPLIST_FILE: 'YES'
         PRODUCT_BUNDLE_IDENTIFIER: com.appcues.sdk
     sources:
-    - path: Sources/SegmentAppcues
+    - path: Sources/Segment-Appcues
     dependencies:
       - package: Segment
       - package: AppcuesKit
     postbuildScripts:
     - name: SwiftLint
       script: 'xcrun --sdk macosx mint run swiftlint --path ./Sources'
-  SegmentAppcuesTests:
+  Segment-AppcuesTests:
     dependencies:
-    - target: SegmentAppcues
+    - target: Segment-Appcues
     platform: iOS
     settings:
       base:
         MARKETING_VERSION: 1.0.0
         CURRENT_PROJECT_VERSION: '1'
         GENERATE_INFOPLIST_FILE: 'YES'
-        PRODUCT_BUNDLE_IDENTIFIER: com.appcues.SegmentAppcuesTests
+        PRODUCT_BUNDLE_IDENTIFIER: com.appcues.Segment-AppcuesTests
     sources:
-    - path: Tests/SegmentAppcuesTests
+    - path: Tests/Segment-AppcuesTests
     type: bundle.unit-test
 packages:
   Segment:

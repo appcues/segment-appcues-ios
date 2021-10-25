@@ -7,7 +7,7 @@
 
 import UIKit
 import Segment
-import SegmentAppcues
+import Segment_Appcues
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
