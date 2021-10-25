@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		096A5BFCCD5B686A0D5876A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA379EDC987E2F2133F1BA6 /* Assets.xcassets */; };
-		0B73408AD35A4D0B7CF9C496 /* SegmentAppcues in Frameworks */ = {isa = PBXBuildFile; productRef = FFFA5A7015571438D9746658 /* SegmentAppcues */; };
+		0B73408AD35A4D0B7CF9C496 /* Segment-Appcues in Frameworks */ = {isa = PBXBuildFile; productRef = 1A39AF6F0BAB0C9B52DD820A /* Segment-Appcues */; };
 		0F5A613ADDE782008347CFE2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF1CF95581420B9D19A3B17 /* SignInViewController.swift */; };
 		16C0C3F96C13FB79F33FC85C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DCEDF8AA853DFF8CA9E601 /* ProfileViewController.swift */; };
 		20374C2D510399894ADCC44E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB622FAEF94DD34049FCABA /* SceneDelegate.swift */; };
@@ -41,7 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56703BA6135C5006C0E27438 /* Segment in Frameworks */,
-				0B73408AD35A4D0B7CF9C496 /* SegmentAppcues in Frameworks */,
+				0B73408AD35A4D0B7CF9C496 /* Segment-Appcues in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			name = SegmentDestinationExample;
 			packageProductDependencies = (
 				94F64F73E18BAC132F477D4C /* Segment */,
-				FFFA5A7015571438D9746658 /* SegmentAppcues */,
+				1A39AF6F0BAB0C9B52DD820A /* Segment-Appcues */,
 			);
 			productName = SegmentDestinationExample;
 			productReference = A4DDC1D3BCA0C61E5DCBC47F /* SegmentDestinationExample.app */;
@@ -411,14 +411,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1A39AF6F0BAB0C9B52DD820A /* Segment-Appcues */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "Segment-Appcues";
+		};
 		94F64F73E18BAC132F477D4C /* Segment */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 84ED075FD9E3805A03E6DFD7 /* XCRemoteSwiftPackageReference "analytics-swift" */;
 			productName = Segment;
-		};
-		FFFA5A7015571438D9746658 /* SegmentAppcues */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SegmentAppcues;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
