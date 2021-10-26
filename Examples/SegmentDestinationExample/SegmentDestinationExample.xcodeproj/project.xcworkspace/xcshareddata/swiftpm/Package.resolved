@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Segment",
+        "repositoryURL": "https://github.com/segmentio/analytics-swift",
+        "state": {
+          "branch": null,
+          "revision": "ffc12658b60ff60ba8ab91f26a12768cb5e2902e",
+          "version": "1.0.3"
+        }
+      },
+      {
         "package": "Appcues",
         "repositoryURL": "https://github.com/appcues/appcues-ios-sdk.git",
         "state": {
