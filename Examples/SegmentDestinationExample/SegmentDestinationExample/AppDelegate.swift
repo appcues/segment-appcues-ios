@@ -8,7 +8,6 @@
 import UIKit
 import Segment
 import Segment_Appcues
-import AppcuesKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,23 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        let configuration = Configuration(writeKey: <#SEGMENT_WRITE_KEY#>)
-            .trackApplicationLifecycleEvents(true)
-
-        let analytics = Analytics(configuration: configuration)
-        let appcuesDestination = AppcuesDestination()
-
         // Add the Appcues destination plugin
-        analytics.add(plugin: appcuesDestination)
-
-        // Add Segment automatic screen tracking plugin
-        analytics.add(plugin: UIKitScreenTracking())
-
-        Analytics.shared = analytics
-
-        // Capture a reference to the underlying Appcues SDK here to access any additional
-        // functionality like the Debugger
-        Appcues.shared = appcuesDestination.appcues
+        Analytics.shared.add(plugin: AppcuesDestination.shared)
 
         return true
     }
@@ -59,9 +43,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension Analytics {
-    static var shared: Analytics?
+    static var shared = Analytics(configuration: Configuration(writeKey: <#SEGMENT_WRITE_KEY#>)
+                                    .trackApplicationLifecycleEvents(true))
 }
 
-extension Appcues {
-    static var shared: Appcues?
+extension AppcuesDestination {
+    // Creating a shared reference to this destination will allow us to access the underlying
+    // Appcues SDK in other areas of the code.  This enables access to any additional SDK
+    // functionality desired, like the Debugger
+    static var shared = AppcuesDestination()
 }
