@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
             properties["familyName"] = familyName
         }
 
-        Analytics.shared.identify(userId: User.currentID, traits: properties)
+        Analytics.shared?.identify(userId: User.currentID, traits: properties)
 
         givenNameTextField.text = nil
         familyNameTextField.text = nil
