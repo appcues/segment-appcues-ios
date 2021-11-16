@@ -7,7 +7,7 @@
 
 import UIKit
 import Segment
-import AppcuesKit
+import Segment_Appcues
 
 enum User {
     static var currentID = "default-00000"
@@ -25,20 +25,20 @@ class SignInViewController: UIViewController {
 
     @IBAction private func signInTapped(_ sender: UIButton) {
         let userID = userIDTextField.text ?? User.currentID
-        Analytics.shared?.identify(userId: userID)
+        Analytics.shared.identify(userId: userID)
 
         User.currentID = userID
     }
 
     @IBAction private func signOutAction(unwindSegue: UIStoryboardSegue) {
         // Unwind to Sign In
-        Analytics.shared?.reset()
+        Analytics.shared.reset()
     }
 
     @IBAction private func anonymousUserTapped(_ sender: Any) {
         // Segment does not have a matching concept to the Appcues
         // anonymous() function - so we can use the Appcues SDK
         // directly if that functionality is required
-        Appcues.shared?.anonymous()
+        AppcuesDestination.shared.appcues?.anonymous()
     }
 }

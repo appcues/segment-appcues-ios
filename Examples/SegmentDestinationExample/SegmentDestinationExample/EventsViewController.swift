@@ -7,19 +7,19 @@
 
 import UIKit
 import Segment
-import AppcuesKit
+import Segment_Appcues
 
 class EventsViewController: UIViewController {
 
     @IBAction private func buttonOneTapped(_ sender: UIButton) {
-        Analytics.shared?.track(name: "event1")
+        Analytics.shared.track(name: "event1")
     }
 
     @IBAction private func buttonTwoTapped(_ sender: UIButton) {
-        Analytics.shared?.track(name: "event2")
+        Analytics.shared.track(name: "event2")
     }
 
     @IBAction private func debugTapped(_ sender: Any) {
-        Appcues.shared?.debug()
+        AppcuesDestination.shared.appcues?.debug()
     }
 }
