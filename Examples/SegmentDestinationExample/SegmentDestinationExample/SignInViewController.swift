@@ -23,6 +23,12 @@ class SignInViewController: UIViewController {
         userIDTextField.text = User.currentID
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        Analytics.shared.screen(title: "Sign In Screen")
+    }
+
     @IBAction private func signInTapped(_ sender: UIButton) {
         let userID = userIDTextField.text ?? User.currentID
         Analytics.shared.identify(userId: userID)

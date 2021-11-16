@@ -13,6 +13,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet private var givenNameTextField: UITextField!
     @IBOutlet private var familyNameTextField: UITextField!
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        Analytics.shared.screen(title: "Profile Screen")
+    }
+
     @IBAction private func saveButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
 

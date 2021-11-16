@@ -11,6 +11,12 @@ import Segment_Appcues
 
 class EventsViewController: UIViewController {
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        Analytics.shared.screen(title: "Events Screen")
+    }
+
     @IBAction private func buttonOneTapped(_ sender: UIButton) {
         Analytics.shared.track(name: "event1")
     }
