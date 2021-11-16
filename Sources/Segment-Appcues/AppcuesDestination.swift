@@ -50,20 +50,32 @@ public class AppcuesDestination: DestinationPlugin {
         }
         return event
     }
+
+    public func reset() {
+        guard let appcues = appcues else { return }
+        appcues.reset()
+    }
 }
 
 private extension JSON {
-    // We need to build support for [String: Any] properties, converting to strings for now.
-    // Also note: https://docs.appcues.com/article/161-javascript-api
-    //   Property values can be strings, numbers, or booleans. Beware!
-    //   Any identify call with an array or nested object as a property
-    //   value will not appear in your Appcues account.
-    var appcuesProperties: [String: String]? {
+    // The underlying Appcues API can support strings, numbers, or booleans.
+    // See: https://docs.appcues.com/article/161-javascript-api
+    //
+    // The Appcues SDK also allows URL and Date values that get converted
+    // internally.  Any other more complex custom property types sent through
+    // the Segment plugin must be filtered out.
+    var appcuesProperties: [String: Any]? {
         guard let properties = dictionaryValue else { return nil }
-        var converted: [String: String] = [:]
-        for (key, value) in properties {
-            converted[key] = "\(value)"
+        return properties.compactMapValues { value in
+            guard value is String ||
+                    value is URL ||
+                    value is Bool ||
+                    // swiftlint:disable:next legacy_objc_type
+                    value is NSNumber ||
+                    value is Date else {
+                        return nil
+                    }
+            return value
         }
-        return converted
     }
 }

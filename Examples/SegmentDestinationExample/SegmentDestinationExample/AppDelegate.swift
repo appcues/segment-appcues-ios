@@ -8,6 +8,7 @@
 import UIKit
 import Segment
 import Segment_Appcues
+import AppcuesKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,11 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
+        let configuration = Configuration(writeKey: <#SEGMENT_WRITE_KEY#>)
+            .trackApplicationLifecycleEvents(true)
+
+        let analytics = Analytics(configuration: configuration)
+        let appcuesDestination = AppcuesDestination()
+
         // Add the Appcues destination plugin
-        Analytics.shared.add(plugin: AppcuesDestination())
+        analytics.add(plugin: appcuesDestination)
 
         // Add Segment automatic screen tracking plugin
-        Analytics.shared.add(plugin: UIKitScreenTracking())
+        analytics.add(plugin: UIKitScreenTracking())
+
+        Analytics.shared = analytics
+
+        // Capture a reference to the underlying Appcues SDK here to access any additional
+        // functionality like the Debugger
+        Appcues.shared = appcuesDestination.appcues
 
         return true
     }
@@ -46,7 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension Analytics {
-    static var shared = Analytics(configuration: Configuration(writeKey: <#SEGMENT_WRITE_KEY#>)
-                                    .flushAt(1)
-                                    .trackApplicationLifecycleEvents(true))
+    static var shared: Analytics?
+}
+
+extension Appcues {
+    static var shared: Appcues?
 }

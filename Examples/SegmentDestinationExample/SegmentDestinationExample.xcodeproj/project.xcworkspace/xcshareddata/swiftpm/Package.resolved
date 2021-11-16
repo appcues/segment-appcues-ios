@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/segmentio/analytics-swift",
         "state": {
           "branch": null,
-          "revision": "ffc12658b60ff60ba8ab91f26a12768cb5e2902e",
-          "version": "1.0.3"
+          "revision": "15214bf65a01522af3df46d6b77d9c403afa4d66",
+          "version": "1.0.5"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/appcues/appcues-ios-sdk.git",
         "state": {
           "branch": "main",
-          "revision": "d9dd0ab6b94763ddd1ff0d35ab5ad5478fa0747e",
+          "revision": "ea9b1c368271eb15805b2352459f4fb6389f98d7",
           "version": null
         }
       },
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/segmentio/Sovran-Swift.git",
         "state": {
           "branch": null,
-          "revision": "be79aad4393d36959f422c2b40566b84ee1170f7",
-          "version": "1.0.2"
+          "revision": "944c17d7c46bd95fc37f09136cabd172be5b413b",
+          "version": "1.0.3"
         }
       }
     ]
