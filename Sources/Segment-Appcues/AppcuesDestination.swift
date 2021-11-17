@@ -22,8 +22,14 @@ public class AppcuesDestination: DestinationPlugin {
 
     public private(set) var appcues: Appcues?
 
-    public init() {
-    }
+    private let eventMapping = [
+        "Application Installed": "appcues:application_installed",
+        "Application Opened": "appcues:application_opened",
+        "Application Updated": "appcues:application_updated",
+        "Application Backgrounded": "appcues:application_backgrounded",
+    ]
+
+    public init() { }
 
     public func update(settings: Settings, type: UpdateType) {
         guard let appcuesSettings: AppcuesSettings = settings.integrationSettings(forPlugin: self) else { return }
@@ -39,7 +45,9 @@ public class AppcuesDestination: DestinationPlugin {
 
     public func track(event: TrackEvent) -> TrackEvent? {
         if let appcues = appcues {
-            appcues.track(name: event.event, properties: event.properties?.appcuesProperties)
+            let segmentEventName = event.event
+            let eventName = eventMapping[segmentEventName] ?? segmentEventName
+            appcues.track(name: eventName, properties: event.properties?.appcuesProperties)
         }
         return event
     }
