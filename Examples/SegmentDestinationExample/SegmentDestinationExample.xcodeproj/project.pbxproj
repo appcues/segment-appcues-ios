@@ -11,6 +11,7 @@
 		0B73408AD35A4D0B7CF9C496 /* Segment-Appcues in Frameworks */ = {isa = PBXBuildFile; productRef = 1A39AF6F0BAB0C9B52DD820A /* Segment-Appcues */; };
 		0F5A613ADDE782008347CFE2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF1CF95581420B9D19A3B17 /* SignInViewController.swift */; };
 		16C0C3F96C13FB79F33FC85C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DCEDF8AA853DFF8CA9E601 /* ProfileViewController.swift */; };
+		1A711F3C2768F4460099D732 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A711F3B2768F4460099D732 /* GroupViewController.swift */; };
 		20374C2D510399894ADCC44E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB622FAEF94DD34049FCABA /* SceneDelegate.swift */; };
 		56703BA6135C5006C0E27438 /* Segment in Frameworks */ = {isa = PBXBuildFile; productRef = 94F64F73E18BAC132F477D4C /* Segment */; };
 		583B9F8303592EF95B3E9FDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9562F1AE2D3AD86356B00C9 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0FEB7AEC7697C43DB162271A /* segment-appcues-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "segment-appcues-ios"; path = ../..; sourceTree = SOURCE_ROOT; };
+		1A711F3B2768F4460099D732 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		6DA379EDC987E2F2133F1BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719F42221967743984476BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FF4D700743515AD753C03AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				C3DCEDF8AA853DFF8CA9E601 /* ProfileViewController.swift */,
 				FFB622FAEF94DD34049FCABA /* SceneDelegate.swift */,
 				DDF1CF95581420B9D19A3B17 /* SignInViewController.swift */,
+				1A711F3B2768F4460099D732 /* GroupViewController.swift */,
 			);
 			path = SegmentDestinationExample;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A711F3C2768F4460099D732 /* GroupViewController.swift in Sources */,
 				F538EC84951F64D0860C6346 /* AppDelegate.swift in Sources */,
 				CB9E6EDBE8420D5BD7F20788 /* EventsViewController.swift in Sources */,
 				16C0C3F96C13FB79F33FC85C /* ProfileViewController.swift in Sources */,

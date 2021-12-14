@@ -11,6 +11,7 @@ import AppcuesKit
 
 private struct AppcuesSettings: Codable {
     let appcuesId: String
+    let applicationId: String?
 }
 
 /// An implementation of the Appcues device mode destination as a plugin.
@@ -26,26 +27,35 @@ public class AppcuesDestination: DestinationPlugin {
 
     public func update(settings: Settings, type: UpdateType) {
         guard let appcuesSettings: AppcuesSettings = settings.integrationSettings(forPlugin: self) else { return }
-        appcues = Appcues(config: Appcues.Config(accountID: appcuesSettings.appcuesId))
+        // TODO: remove this once we get proper application ID support in the segment configuration
+        let applicationId = appcuesSettings.applicationId ?? "146b59e7-4575-43b5-a50e-5e52acd40527"
+        appcues = Appcues(config: Appcues.Config(accountID: appcuesSettings.appcuesId, applicationID: applicationId))
     }
 
     public func identify(event: IdentifyEvent) -> IdentifyEvent? {
-        if let appcues = appcues, let userId = event.userId {
+        if let appcues = appcues, let userId = event.userId, !userId.isEmpty {
             appcues.identify(userID: userId, properties: event.traits?.appcuesProperties)
         }
         return event
     }
 
     public func track(event: TrackEvent) -> TrackEvent? {
-        if let appcues = appcues {
+        if let appcues = appcues, !event.event.isEmpty {
             appcues.track(name: event.event, properties: event.properties?.appcuesProperties)
         }
         return event
     }
 
     public func screen(event: ScreenEvent) -> ScreenEvent? {
-        if let appcues = appcues, let title = event.name {
+        if let appcues = appcues, let title = event.name, !title.isEmpty {
             appcues.screen(title: title, properties: event.properties?.appcuesProperties)
+        }
+        return event
+    }
+
+    public func group(event: GroupEvent) -> GroupEvent? {
+        if let appcues = appcues, let groupID = event.groupId, !groupID.isEmpty {
+            appcues.group(groupID: groupID, properties: event.traits?.appcuesProperties)
         }
         return event
     }
