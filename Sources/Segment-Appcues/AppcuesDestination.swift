@@ -10,14 +10,14 @@ import Segment
 import AppcuesKit
 
 private struct AppcuesSettings: Codable {
-    let appcuesId: String
-    let applicationId: String?
+    let accountId: String
+    let applicationId: String
 }
 
 /// An implementation of the Appcues device mode destination as a plugin.
 public class AppcuesDestination: DestinationPlugin {
     public let timeline = Timeline()
-    public let key = "Appcues"
+    public let key = "Appcues Mobile"
     public let type = PluginType.destination
     public var analytics: Analytics?
 
@@ -27,9 +27,7 @@ public class AppcuesDestination: DestinationPlugin {
 
     public func update(settings: Settings, type: UpdateType) {
         guard let appcuesSettings: AppcuesSettings = settings.integrationSettings(forPlugin: self) else { return }
-        // TODO: remove this once we get proper application ID support in the segment configuration
-        let applicationId = appcuesSettings.applicationId ?? "146b59e7-4575-43b5-a50e-5e52acd40527"
-        appcues = Appcues(config: Appcues.Config(accountID: appcuesSettings.appcuesId, applicationID: applicationId))
+        appcues = Appcues(config: Appcues.Config(accountID: appcuesSettings.accountId, applicationID: appcuesSettings.applicationId))
     }
 
     public func identify(event: IdentifyEvent) -> IdentifyEvent? {
