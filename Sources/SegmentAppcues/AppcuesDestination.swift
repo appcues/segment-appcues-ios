@@ -23,11 +23,18 @@ public class AppcuesDestination: DestinationPlugin {
 
     public private(set) var appcues: Appcues?
 
-    public init() { }
+    private var configuration: ((Appcues.Config) -> Void)?
+
+    public init(configuration: ((Appcues.Config) -> Void)? = nil) {
+        self.configuration = configuration
+    }
 
     public func update(settings: Settings, type: UpdateType) {
         guard let appcuesSettings: AppcuesSettings = settings.integrationSettings(forPlugin: self) else { return }
-        appcues = Appcues(config: Appcues.Config(accountID: appcuesSettings.accountId, applicationID: appcuesSettings.applicationId))
+        let config = Appcues.Config(accountID: appcuesSettings.accountId, applicationID: appcuesSettings.applicationId)
+            .apply(configuration)
+
+        appcues = Appcues(config: config)
     }
 
     public func identify(event: IdentifyEvent) -> IdentifyEvent? {
@@ -61,6 +68,13 @@ public class AppcuesDestination: DestinationPlugin {
     public func reset() {
         guard let appcues = appcues else { return }
         appcues.reset()
+    }
+}
+
+private extension Appcues.Config {
+    func apply(_ configuration: ((Appcues.Config) -> Void)?) -> Self {
+        configuration?(self)
+        return self
     }
 }
 
