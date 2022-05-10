@@ -7,7 +7,7 @@
 
 import UIKit
 import Segment
-import Segment_Appcues
+import SegmentAppcues
 
 class EventsViewController: UIViewController {
 

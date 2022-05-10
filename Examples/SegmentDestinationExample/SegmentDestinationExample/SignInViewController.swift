@@ -7,7 +7,7 @@
 
 import UIKit
 import Segment
-import Segment_Appcues
+import SegmentAppcues
 
 enum User {
     static var currentID = "default-00000"
