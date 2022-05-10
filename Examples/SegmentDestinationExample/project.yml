@@ -15,7 +15,7 @@ targets:
       - name: SwiftLint
         script: 'if which mint >/dev/null; then
 
-              xcrun --sdk macosx mint run swiftlint
+              xcrun --sdk macosx mint run swiftlint@0.44.0
 
           else
 
@@ -29,10 +29,10 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
     dependencies:
       - package: Segment
-      - package: Segment-Appcues
+      - package: SegmentAppcues
 packages:
   Segment:
     github: segmentio/analytics-swift
     from: 1.0.0
-  Segment-Appcues:
+  SegmentAppcues:
     path: ../..

@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		096A5BFCCD5B686A0D5876A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA379EDC987E2F2133F1BA6 /* Assets.xcassets */; };
-		0B73408AD35A4D0B7CF9C496 /* Segment-Appcues in Frameworks */ = {isa = PBXBuildFile; productRef = 1A39AF6F0BAB0C9B52DD820A /* Segment-Appcues */; };
+		0B73408AD35A4D0B7CF9C496 /* SegmentAppcues in Frameworks */ = {isa = PBXBuildFile; productRef = FFFA5A7015571438D9746658 /* SegmentAppcues */; };
 		0F5A613ADDE782008347CFE2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF1CF95581420B9D19A3B17 /* SignInViewController.swift */; };
 		16C0C3F96C13FB79F33FC85C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DCEDF8AA853DFF8CA9E601 /* ProfileViewController.swift */; };
-		1A711F3C2768F4460099D732 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A711F3B2768F4460099D732 /* GroupViewController.swift */; };
 		20374C2D510399894ADCC44E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB622FAEF94DD34049FCABA /* SceneDelegate.swift */; };
 		56703BA6135C5006C0E27438 /* Segment in Frameworks */ = {isa = PBXBuildFile; productRef = 94F64F73E18BAC132F477D4C /* Segment */; };
 		583B9F8303592EF95B3E9FDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9562F1AE2D3AD86356B00C9 /* LaunchScreen.storyboard */; };
 		A3A39CBC383CDCB372F89ABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A2FA82500D4BD79D66E534 /* Main.storyboard */; };
+		A8E07F2C279B0D2254D74B1D /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAFF55A6B34460A7791BFBA /* GroupViewController.swift */; };
 		CB9E6EDBE8420D5BD7F20788 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4857A1E1E930E154F941E32 /* EventsViewController.swift */; };
 		F538EC84951F64D0860C6346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD939763EFD0A85A7E22ACC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DAFF55A6B34460A7791BFBA /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		0FEB7AEC7697C43DB162271A /* segment-appcues-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "segment-appcues-ios"; path = ../..; sourceTree = SOURCE_ROOT; };
-		1A711F3B2768F4460099D732 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		6DA379EDC987E2F2133F1BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719F42221967743984476BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FF4D700743515AD753C03AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56703BA6135C5006C0E27438 /* Segment in Frameworks */,
-				0B73408AD35A4D0B7CF9C496 /* Segment-Appcues in Frameworks */,
+				0B73408AD35A4D0B7CF9C496 /* SegmentAppcues in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,13 +54,13 @@
 				BBD939763EFD0A85A7E22ACC /* AppDelegate.swift */,
 				6DA379EDC987E2F2133F1BA6 /* Assets.xcassets */,
 				A4857A1E1E930E154F941E32 /* EventsViewController.swift */,
+				0DAFF55A6B34460A7791BFBA /* GroupViewController.swift */,
 				7FF4D700743515AD753C03AA /* Info.plist */,
 				D9562F1AE2D3AD86356B00C9 /* LaunchScreen.storyboard */,
 				61A2FA82500D4BD79D66E534 /* Main.storyboard */,
 				C3DCEDF8AA853DFF8CA9E601 /* ProfileViewController.swift */,
 				FFB622FAEF94DD34049FCABA /* SceneDelegate.swift */,
 				DDF1CF95581420B9D19A3B17 /* SignInViewController.swift */,
-				1A711F3B2768F4460099D732 /* GroupViewController.swift */,
 			);
 			path = SegmentDestinationExample;
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@
 			name = SegmentDestinationExample;
 			packageProductDependencies = (
 				94F64F73E18BAC132F477D4C /* Segment */,
-				1A39AF6F0BAB0C9B52DD820A /* Segment-Appcues */,
+				FFFA5A7015571438D9746658 /* SegmentAppcues */,
 			);
 			productName = SegmentDestinationExample;
 			productReference = A4DDC1D3BCA0C61E5DCBC47F /* SegmentDestinationExample.app */;
@@ -124,7 +124,7 @@
 				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = A6FC403C49432CB9A9956BE1 /* Build configuration list for PBXProject "SegmentDestinationExample" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -173,7 +173,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which mint >/dev/null; then\nxcrun --sdk macosx mint run swiftlint\nelse\necho \"warning: Mint not installed, install from https://github.com/yonaskolb/Mint\"\nfi ";
+			shellScript = "if which mint >/dev/null; then\nxcrun --sdk macosx mint run swiftlint@0.44.0\nelse\necho \"warning: Mint not installed, install from https://github.com/yonaskolb/Mint\"\nfi \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -182,9 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A711F3C2768F4460099D732 /* GroupViewController.swift in Sources */,
 				F538EC84951F64D0860C6346 /* AppDelegate.swift in Sources */,
 				CB9E6EDBE8420D5BD7F20788 /* EventsViewController.swift in Sources */,
+				A8E07F2C279B0D2254D74B1D /* GroupViewController.swift in Sources */,
 				16C0C3F96C13FB79F33FC85C /* ProfileViewController.swift in Sources */,
 				20374C2D510399894ADCC44E /* SceneDelegate.swift in Sources */,
 				0F5A613ADDE782008347CFE2 /* SignInViewController.swift in Sources */,
@@ -401,14 +401,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1A39AF6F0BAB0C9B52DD820A /* Segment-Appcues */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "Segment-Appcues";
-		};
 		94F64F73E18BAC132F477D4C /* Segment */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 84ED075FD9E3805A03E6DFD7 /* XCRemoteSwiftPackageReference "analytics-swift" */;
 			productName = Segment;
+		};
+		FFFA5A7015571438D9746658 /* SegmentAppcues */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SegmentAppcues;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
