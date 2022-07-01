@@ -3,20 +3,20 @@
     "pins": [
       {
         "package": "Segment",
-        "repositoryURL": "https://github.com/segmentio/analytics-swift",
+        "repositoryURL": "https://github.com/segmentio/analytics-swift.git",
         "state": {
           "branch": null,
-          "revision": "e3225f5d796abba87e70fdef2141ec06a33e4d63",
-          "version": "1.0.6"
+          "revision": "8ae3136bffaa139a690e7841bf63143605041540",
+          "version": "1.3.0"
         }
       },
       {
         "package": "Appcues",
         "repositoryURL": "https://github.com/appcues/appcues-ios-sdk.git",
         "state": {
-          "branch": "main",
-          "revision": "42fbd1053f1a6d0e34fb97b00e3f19c2dfbbd725",
-          "version": null
+          "branch": null,
+          "revision": "f70c0b108b33e4b0caf8706ceca2eeafe8d3200d",
+          "version": "1.0.0-beta.3"
         }
       },
       {
