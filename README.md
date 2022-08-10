@@ -1,9 +1,5 @@
 # Analytics-Swift Appcues
 
->NOTE: This is a pre-release project for testing as a part of our mobile beta program. If you are interested in learning more about our mobile product and testing it before it is officially released, please [visit our site](https://www.appcues.com/mobile) and request early access.
->
->If you have been contacted to be a part of our mobile beta program, we encourage you to try out this library and provide feedback via Github issues and pull requests. Please note this library will not operate if you are not part of the mobile beta program.
-
 Add Appcues device mode support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
 
 ## Adding the dependency
@@ -23,7 +19,6 @@ Open your Package.swift file and add the following do your the `dependencies` se
 
 ```
 .package(
-        name: "Segment",
         url: "https://github.com/appcues/segment-appcues-ios.git",
         from: "1.0.0"
     ),
