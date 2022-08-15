@@ -4,7 +4,7 @@ Add Appcues device mode support to your applications via this plugin for [Analyt
 
 ## Adding the dependency
 
-**Note:** the Appcues library itself will be installed as an additional dependency.
+**Note:** the Appcues library itself will be installed as an additional dependency. An installation [tutorial video](https://appcues.wistia.com/medias/2m0v84kv0e) is also available, for reference.
 
 ### via Xcode
 In the Xcode `File` menu, click `Add Packages`. You'll see a dialog where you can search for Swift packages. In the search field, enter the URL to this repo.
