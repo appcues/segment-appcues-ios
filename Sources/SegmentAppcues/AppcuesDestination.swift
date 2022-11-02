@@ -30,11 +30,16 @@ public class AppcuesDestination: DestinationPlugin {
     }
 
     public func update(settings: Settings, type: UpdateType) {
-        guard let appcuesSettings: AppcuesSettings = settings.integrationSettings(forPlugin: self) else { return }
+        guard let appcuesSettings: AppcuesSettings = settings.integrationSettings(forPlugin: self) else {
+            analytics?.log(message: "\(key) destination is disabled via settings")
+            return
+        }
         let config = Appcues.Config(accountID: appcuesSettings.accountId, applicationID: appcuesSettings.applicationId)
             .apply(configuration)
+            .additionalAutoProperties(["_segmentVersion": analytics?.version() ?? "unknown"])
 
         appcues = Appcues(config: config)
+        analytics?.log(message: "\(key) destination loaded")
     }
 
     public func identify(event: IdentifyEvent) -> IdentifyEvent? {
