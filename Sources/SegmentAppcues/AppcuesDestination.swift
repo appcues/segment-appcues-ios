@@ -50,14 +50,14 @@ public class AppcuesDestination: DestinationPlugin {
     }
 
     public func track(event: TrackEvent) -> TrackEvent? {
-        if let appcues = appcues, !event.event.isEmpty {
+        if let appcues = appcues, event.isValid {
             appcues.track(name: event.event, properties: event.properties?.appcuesProperties)
         }
         return event
     }
 
     public func screen(event: ScreenEvent) -> ScreenEvent? {
-        if let appcues = appcues, let title = event.name, !title.isEmpty {
+        if let appcues = appcues, let title = event.title {
             appcues.screen(title: title, properties: event.properties?.appcuesProperties)
         }
         return event
@@ -73,6 +73,23 @@ public class AppcuesDestination: DestinationPlugin {
     public func reset() {
         guard let appcues = appcues else { return }
         appcues.reset()
+    }
+}
+
+private extension TrackEvent {
+    var isValid: Bool {
+        // not a valid appcues event if the name is empty, or if it is re-tracking an internal event
+        // prefixed with "appcues:"
+        !event.isEmpty && !event.lowercased().starts(with: "appcues:")
+    }
+}
+
+private extension ScreenEvent {
+    var title: String? {
+        // return the valid appcues screen, if available, or nil. If the screen title is nil or empty, or
+        // is retracking an internal screen event prefixed with "appcues:", it is ignored
+        guard let title = name, !title.isEmpty && !title.lowercased().starts(with: "appcues:") else { return nil }
+        return title
     }
 }
 
