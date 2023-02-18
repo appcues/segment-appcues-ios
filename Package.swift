@@ -17,7 +17,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(name: "Segment", url: "https://github.com/segmentio/analytics-swift.git" , from: "1.0.0"),
+        .package(name: "Segment", url: "https://github.com/segmentio/analytics-swift.git" , from: "1.3.5"),
         .package(name: "Appcues" , url: "https://github.com/appcues/appcues-ios-sdk.git", from: "1.3.0"),
     ],
     targets: [
