@@ -1,4 +1,7 @@
 # Analytics-Swift Appcues
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/appcues/segment-appcues-ios/blob/main/LICENSE)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fappcues%2Fsegment-appcues-ios%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/appcues/segment-appcues-ios)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fappcues%2Fsegment-appcues-ios%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/appcues/segment-appcues-ios)
 
 Add Appcues device mode support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
 
