@@ -47,6 +47,10 @@ analytics.add(plugin: AppcuesDestination())
 
 Your events will now begin to flow to Appcues in device mode.
 
+## Supporting Builder Preview and Screen Capture
+
+During installation, follow the steps outlined in in the Appcues iOS SDK documentation for [Configuring the Appcues URL Scheme](https://appcues.github.io/appcues-ios-sdk/documentation/appcueskit/urlschemeconfiguring). This is necessary for the complete Appcues builder experience, supporting experience preview, screen capture and debugging.
+
 ## Support
 
 Please use Github issues, Pull Requests, or feel free to reach out to our [support team](mailto:support@appcues.com).
