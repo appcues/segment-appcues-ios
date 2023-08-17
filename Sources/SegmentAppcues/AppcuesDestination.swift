@@ -30,6 +30,8 @@ public class AppcuesDestination: DestinationPlugin {
     }
 
     public func update(settings: Settings, type: UpdateType) {
+        guard type == .initial else { return }
+
         guard let appcuesSettings: AppcuesSettings = settings.integrationSettings(forPlugin: self) else {
             analytics?.log(message: "\(key) destination is disabled via settings")
             return
