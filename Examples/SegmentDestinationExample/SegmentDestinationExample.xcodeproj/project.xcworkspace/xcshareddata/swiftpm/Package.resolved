@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/segmentio/analytics-swift",
         "state": {
           "branch": null,
-          "revision": "939a04164cd4db7ca666dd1e09663edc2d34c4f3",
-          "version": "1.3.3"
+          "revision": "825bac9da99ca02bacf85bdf95f707d8e9f786d1",
+          "version": "1.6.2"
         }
       },
       {
@@ -15,8 +15,17 @@
         "repositoryURL": "https://github.com/appcues/appcues-ios-sdk.git",
         "state": {
           "branch": null,
-          "revision": "b30902d574e2c01e021fef55833087ec03644d09",
-          "version": "4.1.0"
+          "revision": "60f0fd58b4f75a67cb6ed90651d97d41d03f7d8d",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "JSONSafeEncoding",
+        "repositoryURL": "https://github.com/segmentio/jsonsafeencoding-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "af6a8b360984085e36c6341b21ecb35c12f47ebd",
+          "version": "2.0.0"
         }
       },
       {
@@ -24,8 +33,8 @@
         "repositoryURL": "https://github.com/segmentio/Sovran-Swift.git",
         "state": {
           "branch": null,
-          "revision": "944c17d7c46bd95fc37f09136cabd172be5b413b",
-          "version": "1.0.3"
+          "revision": "24867f3e4ac62027db9827112135e6531b6f4051",
+          "version": "1.1.2"
         }
       }
     ]
