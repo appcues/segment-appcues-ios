@@ -23,7 +23,7 @@ Open your Package.swift file and add the following do your the `dependencies` se
 ```
 .package(
         url: "https://github.com/appcues/segment-appcues-ios.git",
-        from: "3.0.0"
+        from: "5.0.0"
     ),
 ```
 

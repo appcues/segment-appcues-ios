@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/segmentio/analytics-swift",
         "state": {
           "branch": null,
-          "revision": "825bac9da99ca02bacf85bdf95f707d8e9f786d1",
-          "version": "1.6.2"
+          "revision": "5d3a762da5412d324205a58358b95e1da334c21e",
+          "version": "1.8.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/appcues/appcues-ios-sdk.git",
         "state": {
           "branch": null,
-          "revision": "ae53fa37e66ca44e5777542a5783749db753fc04",
-          "version": "4.3.0"
+          "revision": "248d76a8acddbb1eacc09d7024dfdc565347390d",
+          "version": "5.0.0"
         }
       },
       {
